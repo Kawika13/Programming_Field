@@ -6,10 +6,39 @@ body {
     background-color: blanchedalmond;
 
     /* sizes */
-    height: 5000px;
+    height: 2000px;
 }
 
 /* Classes */
+
+/* Headings */
+h1 {
+    /* format */
+    text-align: center;
+}
+h2{
+    /* format */
+    text-align: center;
+
+    /* font */
+    margin-top: 20px;
+    font-family: 'Zilla Slab', serif;
+    font-size: 30px;
+}
+h3{
+    /* box */
+    margin-top: -10px;
+
+    /* format */
+    text-align: center;
+
+    /* font */
+    font-family: 'Zilla Slab', serif;
+    font-size: 25px;
+}
+/* End */
+
+/* Title */
 .title {
     /* box */
     margin: 20px;
@@ -26,11 +55,9 @@ body {
     width: auto;
     height: auto;
 }
-h1 {
-    /* format */
-    text-align: center;
-}
+/* End */
 
+/* Sidebar */
 .sidebar{
     /* style */
     background: rgb(240, 202, 154);
@@ -51,6 +78,7 @@ h1 {
     flex-direction: column;
 
     /* sizes */
+    max-width: 150px;
     width: 0px;
     height: 100%;
 }
@@ -60,9 +88,7 @@ h1 {
     
     /* font */
     font-size:20px;
-}
-#mySidebar{
-  width: 0px;
+    text-align: center;
 }
 
 .btn{
@@ -94,28 +120,46 @@ h1 {
     /* style */
     transition: margin-left 0.5s;
 }
+/* End */
+
+/* Content */
+.column-content{
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.row-content{
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
 .text{
+    /* box */
+    margin-top: 10px;
+    margin-bottom: 100px;
+
     /* flex */
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 .text > p {
     /* box */
     margin: 0px;
-    padding-right: 50px;
+    padding-right: 60px;
 
     /* format */
-    text-align: justify;
+    text-align: center;
 
     /* font */
     font-family: 'Zilla Slab', serif;
-    font-size: 18px;
+    font-size: 20px;
     
     /* sizes */
-    width: 400px;
+    width: 450px;
     height: auto;
 }
 .text > img {
@@ -123,12 +167,42 @@ h1 {
     transition: 0.5s;
 
     /* sizes */
-    width: 360px; /* 400px */
-    height: 270px; /* 300px */
+    width: 500px; /* 400px */
+    height: 250px; /* 300px */
 }
 
+.block{
+    /* box */
+    margin-right: 10px;
+    margin-left: 10px;
+
+    /* block */
+    display: block;
+
+    /* format */
+    text-align: center;
+
+    /* font */
+    font-family: 'Zilla Slab', serif;
+    font-size: 18px;
+
+    /* sizes */
+    width: 500px;
+    height: auto;
+}
+.block > img{
+    /* animation */
+    transition: 0.5s;
+
+    /* sizes */
+    width: 500px; /* 400px */
+    height: 250px; /* 300px */
+}
+/* End */
+
+
 /* Selectors */
-.text > img:hover{
+img:hover{
     transform:scale(1.1);
 }
 .sidebar > p:hover{
