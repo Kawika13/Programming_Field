@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+
+        <!--id mySidebar, javascript problem (il comando che modifica la larghezza funziona solo se la classe/id da modificare si trova nel suo stesso file [ipotesi])-->
+        <style>
+
+            #mySidebar{
+              width: 0px;
+            }
+
+        </style>
+
+        <script type="text/javascript">
+
+        /* Scrolling down/up in a "top" position*/
+            function scrolling(top){ /* top stands for the y axis value that sets the position of the scroll */
+                window.scrollTo({
+                    top:top,
+                    left:0,
+                    behavior:"smooth"
+                });
+            }
+
+        /* sets the sidebar width on 150px an shift the icon by 150px */
+            function openSidebar(){
+                document.getElementById("mySidebar").style.width = "150px";
+                document.getElementById("main").style.marginLeft = "150px";
+            }
+        /* sets the sidebar width on 0px an shift the icon as long as it return to his start position */
+            function closeSidebar(){
+                if(document.getElementById("mySidebar").offsetWidth == 150){
+                    document.getElementById("mySidebar").style.width = "0";
+                    document.getElementById("main").style.marginLeft = "0";
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="mySidebar" class="sidebar">
+            <p onclick="scrolling(0)">Page's Top</p>
+            <p onclick="scrolling(1500)">Lorem dolor</p>
+            <p onclick="scrolling(2500)">Lorem sit</p>
+            <p onclick="scrolling(3500)">Lorem amet</p>
+            <p onclick="scrolling(4500)">Lorem Lorem</p>
+        </div>
+
+        <div onclick="closeSidebar()">
+            <div class="title">
+                <h1>Energia rinnovabile: <br> Energia Solare</h1>
+            </div>
+
+            <button class="btn" onclick="openSidebar()">
+                <img  id="main" class="fixed" src="img/Hamburger_icon.svg.png">
+            </button>
+
+            <div class="text">
+                <p>
+                    Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet
+                    Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet
+                    Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet
+                    Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet
+                </p>
+                <img src="img/foto-solare.jpg">
+            </div>
+        </div>
+    </body>
+</html>
