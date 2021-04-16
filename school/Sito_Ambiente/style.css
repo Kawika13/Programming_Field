@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap');
+            
+body {
+    /* style */
+    background-color: blanchedalmond;
+
+    /* sizes */
+    height: 5000px;
+}
+
+/* Classes */
+.title {
+    /* box */
+    margin: 20px;
+
+    /* flex */
+    display: flex;
+    justify-content: center;
+
+    /* font */
+    font-family: 'Zilla Slab Highlight', cursive;
+    font-size: 50px;
+
+    /* sizes */
+    width: auto;
+    height: auto;
+}
+h1 {
+    /* format */
+    text-align: center;
+}
+
+.sidebar{
+    /* style */
+    background: rgb(240, 202, 154);
+    overflow-x: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    
+    /* box */
+    padding-top: 60px;
+
+    /* positionig */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+
+    /* sizes */
+    width: 0px;
+    height: 100%;
+}
+.sidebar > p{
+    /* box */
+    margin: 15px;
+    
+    /* font */
+    font-size:20px;
+}
+#mySidebar{
+  width: 0px;
+}
+
+.btn{
+    /* style */
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    /* positioning */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    /* sizes */
+    width: 40px;
+    height: 40px;
+}
+.btn > .fixed{
+    /* positioning */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    /* sizes */
+    width: 40px;
+    height: 40px;
+}
+#main {
+    /* style */
+    transition: margin-left 0.5s;
+}
+
+.text{
+    /* flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.text > p {
+    /* box */
+    margin: 0px;
+    padding-right: 50px;
+
+    /* format */
+    text-align: justify;
+
+    /* font */
+    font-family: 'Zilla Slab', serif;
+    font-size: 18px;
+    
+    /* sizes */
+    width: 400px;
+    height: auto;
+}
+.text > img {
+    /* animation */
+    transition: 0.5s;
+
+    /* sizes */
+    width: 360px; /* 400px */
+    height: 270px; /* 300px */
+}
+
+/* Selectors */
+.text > img:hover{
+    transform:scale(1.1);
+}
+.sidebar > p:hover{
+    text-decoration: underline;
+}
