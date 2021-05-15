@@ -50,6 +50,40 @@ img.logo{
     /* box-model */
     margin: 10px 50px 10px;
 }
+/* End */
+
+/* Return to top arrow */
+#backtop{
+    background-color: #8ffff6;
+    cursor:pointer;
+    transition: 0.75s ease;
+    opacity: 0;
+
+    font-size: 25px;
+
+    border: none;
+    border-radius: 50%;
+
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+}
+#backtop.visible{
+    opacity: 1;
+}
+
+#backtop:hover{
+    transform: rotate(360deg);
+}
+/* End */
+
 li.active{
     text-decoration: none;
     color:black;
