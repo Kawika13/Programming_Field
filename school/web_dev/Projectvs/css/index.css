@@ -5,11 +5,15 @@
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
-    
+
+
 body{
     /* format */
     font-family: 'Comfortaa', cursive;
     
+    /* box-model */
+    margin: 0px;
+
     /* sizes */
     width: auto;
     height: auto;
@@ -18,7 +22,7 @@ body{
 /* Head content */
 .head{
     /* style */
-    background: linear-gradient(to top, #ffff 30%, #c9fffa, #8ffff6, #7ebcff);
+    background: linear-gradient(to top, #ffff , #c9fffa, #8ffff6, #7ebcff);
 
     /* format */
     text-align: center;
@@ -27,7 +31,7 @@ body{
     margin: -10px 0px 0px -10px;
     
     /* sizes */
-    width: 100%;
+    width: auto;
     height: 20%;
 }
 img.logo{
@@ -170,7 +174,7 @@ footer{
     position: relative;
 
     /* sizes */
-    width: 100%;
+    width: auto;
     height: 70px;
 }
 footer > p{

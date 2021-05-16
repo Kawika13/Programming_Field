@@ -2,17 +2,21 @@
 
 
 body{
+    /* format */
     font-family: 'Comfortaa', cursive;
     
+    /* box-model */
+    margin: 0px;
+
     /* sizes */
     width: auto;
-    height: 2160px;
+    height: auto;
 }
 
 /* Head content */
 .head{
     /* style */
-    background: linear-gradient(to top, #ffff 30%, #c9fffa, #8ffff6, #7ebcff);
+    background: linear-gradient(to top, #ffff, #c9fffa, #8ffff6, #7ebcff);
 
     /* fomatting */
     text-align: center;
@@ -21,7 +25,7 @@ body{
     margin: -10px 0px 0px -10px;
     
     /* sizes */
-    width: 100%;
+    width: auto;
     height: 20%;
 }
 img.logo{
