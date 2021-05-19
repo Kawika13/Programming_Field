@@ -25,7 +25,8 @@ if (docHeight != undefined) //if docHeight isn't undefined, the offset is equal 
     offset = docHeight / 4;
     }
 
-
+console.log(offset);
+console.log(docHeight);
 /* event listener for the scroll position */
 window.addEventListener("scroll", 
     function(event){
