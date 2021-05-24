@@ -15,6 +15,9 @@ body{
     /* box-model */
     margin: 0px;
 
+    /**/
+    z-index: 1;
+
     /* sizes */
     width: auto;
     height: auto;
@@ -70,51 +73,74 @@ li.active{
 
 /* Body content */
 
-    /* Paragraph */
-    h1{
-        /* format */
-        text-align: center;
-        font-size: 50px;
-
+    /* SlideShowBar */
+    #slideshow{
         /* box-model */
         margin-top: 100px;
-    }
-    .item{
-        /* block */
+
+        /* flex */
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
     }
-
-    .box {
-        /*  */
-        background-color: #ecfcfa;
+    .slider{
+        /* format */
+        text-align: center;
         
+        /* overflow */
+        overflow: hidden;
+    
+        /* sizes */
+        width: 1380px;
+    }
+    .item{
+        /* flex */
+        display: flex;
+    
+        /* overflow */
+        overflow-x: auto;
+    
+        /* scroll */
+        scroll-snap-type: x mandatory; /* snap behavior */
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: auto;
+    }
+    .item > .box {
+        /* style */
+        background-color: #ecfcfa;
+    
         /* box-model */
-        margin: 20px;
+        margin: 0px 20px 10px 0px;
         border-radius: 16px;
-
+    
         /* flex */
         display: block;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        flex-shrink: 1;
+    
+        /* scroll */
+        scroll-snap-align: center;
+    
+        /* sizes */
+        width: auto;
+        height: 600px;
     }
     .box > p{
         /* format */
         text-align: left;
-
+    
         /* box-model */
         padding: 20px;
         margin: 0px;
-
+    
         /* sizes */
         width: 400px;
     }
     .box > .img{
         /* box-model */
         padding: 20px;
-
+    
         /* sizes */
         width: 400px;
     }
@@ -123,6 +149,28 @@ li.active{
         width: 400px;
         height: 256px;
     }
+    
+        /* Scrollbar */
+        .item::-webkit-scrollbar{
+            /* style */
+            background: rgb(230, 230, 230);
+        
+            /* box-model */
+            border-radius: 10px;
+        
+            /* sizes */
+            width: 1380px;
+            height: 10px;
+        }
+        .item::-webkit-scrollbar-thumb{
+            /* sizes */
+            background: #7ebcff;
+        
+            /* box-model */
+            border-radius: 10px;
+        }
+        /* End Scrollbar */
+
     /* End Paragraph*/
 
 /* End Body content */
@@ -168,19 +216,25 @@ li.active{
 /* Footer */
 footer{
     /* style */
-    background: linear-gradient(to bottom, #c9fffa, #8ffff6, #7ebcff);
+    background: linear-gradient(to bottom, #c9fffa 20%, #8ffff6, #7ebcff);
 
     /* box-model */
     margin-top: 100%;
     margin-left: -8px;
     margin-bottom: -8px;
 
+    /* flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     /* position */
     position: relative;
+    z-index: -1;
 
     /* sizes */
     width: auto;
-    height: 70px;
+    height: 200px;
 }
 footer > p{
     padding-top: 32px;

@@ -3,7 +3,7 @@ function nav_bar(){
     document.write(`
 
     <div class="head">
-        <img src="../Immagini/logo.png" class="logo"/>
+        <a href="index.html?mn=home"><img src="../Immagini/logo.png" class="logo"/></a>
         <ul class="nav_bar">
             <li id="index"><a href="index.html?mn=home">Home</a></li>
             <li id="ist"><a href="istituto.html?mn=ist">Isitituto</a></li>
