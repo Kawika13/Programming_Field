@@ -6,9 +6,25 @@ function nav_bar(){
         <a href="index.html?mn=home"><img src="../Immagini/logo.png" class="logo"/></a>
         <ul class="nav_bar">
             <li id="index"><a href="index.html?mn=home">Home</a></li>
-            <li id="ist"><a href="istituto.html?mn=ist">Isitituto</a></li>
-            <li id="did"><a href="didattica.html?mn=did">Didattica</a></li>
-            <li id="mod"><a href="modulistica.html?mn=mod">Modulistica</a></li>
+            <li id="ist"><a href="#">Isitituto &darr;</a>
+                <ul class="dropdown">
+                    <li><a href="https://www.isitgrosseto.com/?mn=ist" target="_blank">Presentazione</a></li>
+                    <li><a href="https://www.polomanettiporciatti.edu.it/pagine/regolamento-di-istituto-as-20202021?mn=ist" target="_blank">Regolamento</a></li>
+                </ul>
+            </li>
+            <li id="did"><a href="#">Didattica &darr;</a>
+                <ul class="dropdown">
+                    <li><a href="https://www.polomanettiporciatti.edu.it/pagine/orario-delle-lezioni---as-202021#?mn=did" target="_blank">Orari Lezione</a></li>
+                    <li><a href="https://www.polomanettiporciatti.edu.it/pagine/siti-utili?mn=did" target="_blank">Siti Utili</a></li>
+                </ul>
+            </li>
+            <li id="mod"><a href="#">Modulistica &darr;</a>
+                <ul class="dropdown">
+                    <li><a href="https://www.polomanettiporciatti.edu.it/pagine/libri-di-testo-as-202021?mn=mod" target="_blank">Libri di testo</a></li>
+                    <li><a href="https://www.polomanettiporciatti.edu.it/pagine/uscita-autonoma-del-minore-da-scuola?mn=mod" target="_blank">Uscita Autonoma</a></li>
+                    <li><a href="https://www.polomanettiporciatti.edu.it/pagine/versamenti-tasse-e-contributi?mn=mod" target="_blank">Versamenti</a></li>
+                </ul>
+            </li>
             <li id="news"><a href="news.html?mn=news">News</a></li>
         </ul>
     </div>
