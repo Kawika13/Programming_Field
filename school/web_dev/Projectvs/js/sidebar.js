@@ -4,13 +4,22 @@ function side_menu(){
     <div id="mySidebar" class="sidebar">
         <h1>Assistente<br>ADA Compliance</h1>
         <div class="text">
+            <h3>Colorazione</h3>
             <p>Premendo il tasto sottostante tutto il contenuto della pagina invertirà la sua colorazione, così da aumentarne il contrasto.</p>
-            <button onclick="change_colors()"> Press Me </button>
+            <button id="inverter" tabindex="1" onclick="change_colors()"> Press Me </button>
+            <br><br>
+            <h3>Navigazione Intelligente</h3>
+            <p>Le frecce "&rarr;" e "&larr;" della tastiera permetteranno rispettivamente di aprire e chiudere la barra laterale qui presente.</p>
+            <p>Premendo il tasto Tab sarà possibile navigare tra i vari link della pagina.</p>
         </div>
     </div>
-    <div onclick="closeSidebar()">
-        <button class="btn" onclick="openSidebar()">
-            <img  id="main" class="hamburger" src="../Immagini/Hamburger_icon.svg.png">
+    <div >
+        <button class="btn" onclick="bar_int()">
+            <div id="main" class="container">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </button>
     </div>
 
@@ -24,22 +33,23 @@ side_menu()
 var sidebar = document.getElementById("mySidebar"),
     main = document.getElementById("main"),
     bo = document.getElementById("cont"),
-    site = document.getElementById("Site");
+    site = document.getElementById("Site"),
+    inv = document.getElementById("inverter");
 
-/* WORKING PROGRESS */
-/*
-function doWhichKey(e) { 
-    e = e || window.event; 
-    let charCode = e.keyCode || e.which; 
-    return String.fromCharCode(charCode); 
-} 
-*/
+
+/* icon transformation */
+function myFunction(x) {
+    x.classList.toggle("change");
+}
 
 /* sets the sidebar width on 150px an shift the icon by 150px */
 function openSidebar(){
-    sidebar.style.width = "500px";
-    main.style.marginLeft = "500px";
-    bo.style.opacity = "0.2"
+    if(sidebar.offsetWidth == 0){
+        sidebar.style.width = "500px";
+        main.style.marginLeft = "500px";
+        bo.style.opacity = "0.2"
+        myFunction(main);
+    }
 }
 
 /* sets the sidebar width on 0px an shift the icon as long as it return to his start position */
@@ -48,26 +58,39 @@ function closeSidebar(){
         sidebar.style.width = "0";
         main.style.marginLeft = "0";
         bo.style.opacity = "1"
+        myFunction(main);
     }
+}
+
+/* onclick bug resolver for the toggle */
+function bar_int(){
+    if(sidebar.offsetWidth == 500)
+        closeSidebar();
+    else
+        openSidebar();
 }
 
 /* color inverter function */
 function change_colors(){
     if (site.style.filter == "invert(100%)"){
         site.style.filter = "";
-    }else{
+    }else
         site.style.filter = "invert(100%)";
-    }
 }
 
-
-/* WORKING PROGRESS */
-/*
-window.addEventListener('keypress', function (e) {
-    if (doWhichKey(e) == "a");
+/* keyboard features */
+document.addEventListener("keyup", function(event){
+    /* Arrows interaction */
+    if(event.key == "ArrowRight")
         openSidebar();
-        if (sidebar.offsetWidth == 500){
-            closeSidebar()
-        }
-}, false);
-*/
+    else if(event.key == "ArrowLeft")
+        closeSidebar();
+
+    /* Tab event */
+    else if(event.key == "Tab"){
+        if(inv === document.activeElement)
+            openSidebar();
+        else
+            closeSidebar();
+    }
+});
