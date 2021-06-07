@@ -317,7 +317,9 @@ li.active{
         height: auto;
     }
     .box > a > .img{
+        /* style */
         transition: .5s;
+
         /* box-model */
         margin-left: 10px;
         margin-right: 10px;
@@ -356,7 +358,6 @@ li.active{
 
     .box > a > .img:hover{
         /* style */
-        
         opacity: .7;
     }
     /* End Paragraph*/
@@ -429,8 +430,10 @@ footer{
 
     /* flex */
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: flex-end;
 
     /* position */
     position: relative;
@@ -439,11 +442,20 @@ footer{
 
     /* sizes */
     width: auto;
-    height: 200px;
+    height: 250px;
 }
-footer > p{
-    padding-top: 32px;
-    padding-left: 8px;
+footer > div{
+    /* box-model */
+    margin: 30px 30px 25px 0px;
+    
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+footer > div > p{
+    /* box-model */
+    margin-top: -10px;
 }
 /* End */
 

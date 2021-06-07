@@ -75,16 +75,35 @@ function bar_int(){
 
 /* color inverter function */
 function change_colors(){
+    /* if the screen is inverted */
     if (site.style.filter == "invert(1)"){
         site.style.filter = "";
+
+        /* normal invert for the images */
         for (var i = 0; i < img.length; i++)
             img[i].style.filter = "invert(0)";
-        img[i].style.filter = "invert(0)";
-    }else
+
+        /* normal transition for the images */
+        for (var i = 0; i < img.length; i++)
+            img[i].style.transition = "all .5s";
+    
+    /* if the screen isn't inverted */
+    }else{
         site.style.filter = "invert(1)";
+
+        /* counter invert for the images */
         for (var i = 0; i < img.length; i++)
             img[i].style.filter = "invert(1)";
-            
+    
+        /* clear the transition for the invert action */
+        for (var i = 0; i < img.length; i++)
+            img[i].style.transition = "all 0s";
+    }
+    /* reset the transition */
+    setTimeout(function(){
+        for (var i = 0; i < img.length; i++)
+            img[i].style.transition = "all .5s";
+    }, 1);
 }
 
 /* keyboard features */
