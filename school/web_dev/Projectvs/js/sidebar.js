@@ -34,8 +34,11 @@ var sidebar = document.getElementById("mySidebar"),
     main = document.getElementById("main"),
     bo = document.getElementById("cont"),
     site = document.getElementById("Site"),
-    inv = document.getElementById("inverter");
+    inv = document.getElementById("inverter"),
+    img = document.getElementsByClassName("img");
 
+
+console.log(img)
 
 /* icon transformation */
 function myFunction(x) {
@@ -72,10 +75,16 @@ function bar_int(){
 
 /* color inverter function */
 function change_colors(){
-    if (site.style.filter == "invert(100%)"){
+    if (site.style.filter == "invert(1)"){
         site.style.filter = "";
+        for (var i = 0; i < img.length; i++)
+            img[i].style.filter = "invert(0)";
+        img[i].style.filter = "invert(0)";
     }else
-        site.style.filter = "invert(100%)";
+        site.style.filter = "invert(1)";
+        for (var i = 0; i < img.length; i++)
+            img[i].style.filter = "invert(1)";
+            
 }
 
 /* keyboard features */

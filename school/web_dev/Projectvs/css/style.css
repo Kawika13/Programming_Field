@@ -160,7 +160,7 @@ li.active{
     .sidebar{
         /* style */
         background: #7ebcff;
-        overflow-x: hidden;
+        overflow: hidden;
         transition: 0.5s;
         
         /* box */
@@ -267,7 +267,7 @@ li.active{
         overflow: hidden;
     
         /* sizes */
-        width: 1300px;
+        width: 1310px;
     }
     .item{
         /* flex */
@@ -300,8 +300,8 @@ li.active{
         scroll-snap-align: center;
     
         /* sizes */
-        width: auto;
-        height: auto;
+        width: 420px;
+        height: fit-content;
     }
     .box > p{
         /* format */
@@ -314,17 +314,17 @@ li.active{
 
         /* sizes */
         width: 400px;
+        height: auto;
     }
     .box > a > .img{
         transition: .5s;
-
         /* box-model */
         margin-left: 10px;
         margin-right: 10px;
 
         /*sizes*/
-        width: 400px;
-        height: 256px;
+        width: 100%;
+        height: 100%;
     }
     
         /* Scrollbar */
@@ -355,6 +355,8 @@ li.active{
         /* End Scrollbar */
 
     .box > a > .img:hover{
+        /* style */
+        
         opacity: .7;
     }
     /* End Paragraph*/
@@ -421,7 +423,7 @@ footer{
     background: linear-gradient(to bottom, #ffff 10%, #8ffff6, #7ebcff);
 
     /* box-model */
-    margin-top: 400px;
+    margin-top: 300px;
     margin-left: -8px;
     margin-bottom: -8px;
 
