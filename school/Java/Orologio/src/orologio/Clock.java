@@ -37,7 +37,7 @@ public class Clock {
         System.out.println(hour + "." + min + "." + sec);
     }
     
-    public void validityCheck(){
+    private void validityCheck(){
         if(hour > 23 || min > 59 || sec > 59){
             System.out.println("Invalid class value, please use modify for retry");
             reset();
