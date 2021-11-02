@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package atleta;
+
 
 import java.util.*;
 
-/**
- *
- * @author Studente
- */
+
 public class Atleta {
     
     private int age;
