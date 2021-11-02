@@ -15,16 +15,16 @@ public class Atleta {
     
     private int age;
     private double weight, height;
-    private String name, surname, country;
+    private String name, surname, country, sport;
     private boolean visitaMedica;
 
-    public Atleta(int age, double weight, double height, String name, String surname, boolean visitaMedica) {
+    public Atleta(int age, double weight, double height, String name, String surname, String sport, boolean visitaMedica) {
         this.age = age;
         this.weight = weight;
         this.height = height;
         this.name = name;
         this.surname = surname;
-        this.country = country;
+        this.sport = sport;
         this.visitaMedica = visitaMedica;
     }
 
@@ -38,6 +38,7 @@ public class Atleta {
         System.out.println("Age : " + age);
         System.out.println("Weight : " + weight);
         System.out.println("Height: " + height);
+        System.out.println("Sport: " + sport);
         System.out.println("Country: " + country);
         System.out.println("Medical examination, done? : " + visitaMedica);
     }
