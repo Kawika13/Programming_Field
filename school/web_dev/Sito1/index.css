@@ -1,0 +1,64 @@
+/* Navigation Bar */
+
+header{
+    
+    background: lightblue;
+    position: relative;
+    top:0;
+    left:0;
+}
+header > ul{
+
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    /* box-model */
+    padding: 8px;
+}
+header > ul > li{
+
+    /* fomatting */
+    font-size: large;
+    display: inline;
+
+    /* box-model */
+    margin: 10px 50px 10px;
+}
+
+.boxes{
+    display: flex;
+    justify-content: center;
+}
+.boxes > .box{
+
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    overflow-y: scroll;
+
+    max-height: 350px;
+    width: 300px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: lightblue;
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(148, 185, 197);
+}
