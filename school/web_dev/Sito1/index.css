@@ -1,11 +1,38 @@
-/* Navigation Bar */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+
+body{
+    /* formatting */
+    font-family: 'Open Sans', sans-serif;
+
+    /* box-model */
+    margin: 0;
+}
+
+/* Navigation Bar */
 header{
-    
-    background: lightblue;
+
+    /* style */
+    background: linear-gradient(to bottom, rgb(168, 168, 255), white);
+
+    /* positioning */
     position: relative;
     top:0;
     left:0;
+
+    /* flex */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+header > h1{
+
+    /* formatting */
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+
 }
 header > ul{
 
@@ -28,37 +55,51 @@ header > ul > li{
     margin: 10px 50px 10px;
 }
 
+/* Content */
 .boxes{
+
+    margin-top: 100px;
+
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
 }
 .boxes > .box{
 
     display: flex;
-    flex-direction: column;
-    margin: 40px;
-    overflow-y: scroll;
+    flex-direction: row;
 
-    max-height: 350px;
-    width: 300px;
+}
+.boxes > .box > p{
+
+    /* formatting */
+    text-align: justify;
+    width: 400px;
 }
 
 /* width */
 ::-webkit-scrollbar {
+
     width: 10px;
 }
   
   /* Track */
   ::-webkit-scrollbar-track {
+
     background: #f1f1f1;
+    border-radius: 10px;
 }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
+
     background: lightblue;
+    border-radius: 10px;
 }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
+
     background: rgb(148, 185, 197);
 }
