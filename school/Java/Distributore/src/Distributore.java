@@ -22,13 +22,19 @@ public class Distributore {
         acceso =! acceso;
         /* if (acceso) acceso = false; else acceso = true; */
     }
-    
+
     /** Inserisce un gettone nel distributore; 
      *  valore di ritorno: 
      *      0 - se l'operazione va a buon fine; 
      *      1 - se la gettoniera è piena e il gettone non può essere accettato; 
      *      100 - se la macchina è spenta
      */
+    
+    public int getTotGettoni() {
+        return totGettoni;
+    }
+    
+    
     public int inserimentoGettone(){
         if (acceso){
             if (totGettoni < 12){
@@ -98,6 +104,7 @@ public class Distributore {
     public int svuotaERicarica(){
         if (acceso){
             totGettoni = 0;
+            credito = 0;
             caffe = 10;
             cappuccino = 10;
             return 0;

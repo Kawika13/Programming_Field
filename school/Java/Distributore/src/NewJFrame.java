@@ -39,6 +39,10 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -50,7 +54,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Gabriola", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Distributore Automatico");
-        jLabel1.setToolTipText("");
+        jLabel1.setToolTipText("This your personal caffeine distributor");
         jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -59,7 +63,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel1.setPreferredSize(new java.awt.Dimension(210, 45));
 
         jButton1.setBackground(new java.awt.Color(255, 0, 0));
-        jButton1.setText("Start");
+        jButton1.setText("Off");
+        jButton1.setToolTipText("This button will on/off the machine");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -76,6 +81,7 @@ public class NewJFrame extends javax.swing.JFrame {
         });
 
         jButton3.setText("Gettoni");
+        jButton3.setToolTipText("This button will insert a coin");
         jButton3.setEnabled(false);
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -84,6 +90,7 @@ public class NewJFrame extends javax.swing.JFrame {
         });
 
         jButton4.setText("Caffé");
+        jButton4.setToolTipText("This button will pick a coffe");
         jButton4.setEnabled(false);
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -100,16 +107,48 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("10");
 
+        jButton5.setText("Restituzione");
+        jButton5.setToolTipText("This button will return your money");
+        jButton5.setEnabled(false);
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+
+        jButton6.setText("Reset");
+        jButton6.setToolTipText("This button will reset the machine");
+        jButton6.setEnabled(false);
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
+
+        jLabel5.setText("0");
+        jLabel5.setToolTipText("This line will show the coins inside the machine");
+
+        jLabel6.setText("Totale Gettoni");
+        jLabel6.setToolTipText("This line will show the coins insede the machine");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton6))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(75, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel5))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -144,8 +183,16 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
-                .addComponent(jButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(jButton6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton5)))
         );
 
         pack();
@@ -161,14 +208,22 @@ public class NewJFrame extends javax.swing.JFrame {
         dist.accensioneSpegnimento();
         if(dist.isAcceso()){
             jButton1.setBackground(Color.GREEN);
+            jButton1.setText("On");
             jButton2.setEnabled(true);
+            jButton2.setToolTipText("This button will pick a cappuccino");
             jButton3.setEnabled(true);
             jButton4.setEnabled(true);
+            jButton5.setEnabled(true);
+            jButton6.setEnabled(true);
         }else{
             jButton1.setBackground(Color.RED);
+            jButton1.setText("Off");
             jButton2.setEnabled(false);
+            jButton2.setToolTipText(null);
             jButton3.setEnabled(false);
             jButton4.setEnabled(false);
+            jButton5.setEnabled(false);
+            jButton6.setEnabled(false);
         }
     }//GEN-LAST:event_jButton1MouseClicked
 
@@ -176,21 +231,37 @@ public class NewJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         dist.inserimentoGettone();
         jLabel2.setText(String.valueOf(dist.getCredito()));
+        jLabel5.setText(String.valueOf(dist.getTotGettoni()));
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         // TODO add your handling code here:
         dist.prendiCaffe();
         jLabel2.setText(String.valueOf(dist.getCredito()));
-        jLabel2.setText(String.valueOf(dist.getCaffe()));
+        jLabel3.setText(String.valueOf(dist.getCaffe()));
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
         dist.prendiCappuccino();
         jLabel2.setText(String.valueOf(dist.getCredito()));
-        jLabel2.setText(String.valueOf(dist.getCappuccino()));
+        jLabel4.setText(String.valueOf(dist.getCappuccino()));
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+        dist.restituisciCredito();
+        jLabel2.setText(String.valueOf(dist.getCredito()));
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        // TODO add your handling code here:
+        dist.svuotaERicarica();
+        jLabel2.setText(String.valueOf(dist.getCredito()));
+        jLabel3.setText(String.valueOf(dist.getCaffe()));
+        jLabel4.setText(String.valueOf(dist.getCappuccino()));
+        jLabel5.setText(String.valueOf(dist.getTotGettoni()));
+    }//GEN-LAST:event_jButton6MouseClicked
 
     /**
      * @param args the command line arguments
@@ -232,9 +303,13 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }
