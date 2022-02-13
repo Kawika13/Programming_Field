@@ -21,6 +21,7 @@ public class Documento {
         this.titolo = titolo;
     }
     
+    // Dinamic Array (pseudo list)
     public void addParagrafo(Paragrafo p){
 
         if(next_index < MAX_SPACE){
