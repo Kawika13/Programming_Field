@@ -95,6 +95,7 @@ public class Distributore {
     
     public int restituisciCredito(){
         if (acceso){
+            totGettoni -= credito;
             credito = 0;
             return 0;
         }else

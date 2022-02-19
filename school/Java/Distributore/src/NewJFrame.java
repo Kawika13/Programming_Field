@@ -31,18 +31,18 @@ public class NewJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        title = new javax.swing.JLabel();
+        btnOnOff = new javax.swing.JButton();
+        btnCappuccino = new javax.swing.JButton();
+        btnGettoni = new javax.swing.JButton();
+        btnCaffe = new javax.swing.JButton();
+        numGettoni = new javax.swing.JLabel();
+        numCaffe = new javax.swing.JLabel();
+        numCappuccino = new javax.swing.JLabel();
+        btnResto = new javax.swing.JButton();
+        btnReset = new javax.swing.JButton();
+        numTotGettoni = new javax.swing.JLabel();
+        totGettoni = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -51,148 +51,142 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Gabriola", 1, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Distributore Automatico");
-        jLabel1.setToolTipText("This your personal caffeine distributor");
-        jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel1.setMaximumSize(new java.awt.Dimension(210, 45));
-        jLabel1.setMinimumSize(new java.awt.Dimension(210, 45));
-        jLabel1.setPreferredSize(new java.awt.Dimension(210, 45));
+        title.setFont(new java.awt.Font("Gabriola", 1, 24)); // NOI18N
+        title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        title.setText("Distributore Automatico");
+        title.setToolTipText("This is your personal caffeine distributor");
+        title.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        title.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        title.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        title.setMaximumSize(new java.awt.Dimension(210, 45));
+        title.setMinimumSize(new java.awt.Dimension(210, 45));
+        title.setPreferredSize(new java.awt.Dimension(210, 45));
 
-        jButton1.setBackground(new java.awt.Color(255, 0, 0));
-        jButton1.setText("Off");
-        jButton1.setToolTipText("This button will on/off the machine");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnOnOff.setBackground(new java.awt.Color(255, 0, 0));
+        btnOnOff.setText("Off");
+        btnOnOff.setToolTipText("This button will turn on/off the machine");
+        btnOnOff.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnOnOff.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                btnOnOffMouseClicked(evt);
             }
         });
 
-        jButton2.setText("Cappuccino");
-        jButton2.setEnabled(false);
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnCappuccino.setText("Cappuccino");
+        btnCappuccino.setEnabled(false);
+        btnCappuccino.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                btnCappuccinoMouseClicked(evt);
             }
         });
 
-        jButton3.setText("Gettoni");
-        jButton3.setToolTipText("This button will insert a coin");
-        jButton3.setEnabled(false);
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnGettoni.setText("Gettoni");
+        btnGettoni.setEnabled(false);
+        btnGettoni.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+                btnGettoniMouseClicked(evt);
             }
         });
 
-        jButton4.setText("Caffé");
-        jButton4.setToolTipText("This button will pick a coffe");
-        jButton4.setEnabled(false);
-        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnCaffe.setText("Caffé");
+        btnCaffe.setEnabled(false);
+        btnCaffe.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton4MouseClicked(evt);
+                btnCaffeMouseClicked(evt);
             }
         });
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("0");
+        numGettoni.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        numGettoni.setText("0");
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("10");
+        numCaffe.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        numCaffe.setText("10");
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText("10");
+        numCappuccino.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        numCappuccino.setText("10");
 
-        jButton5.setText("Restituzione");
-        jButton5.setToolTipText("This button will return your money");
-        jButton5.setEnabled(false);
-        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnResto.setText("Restituzione");
+        btnResto.setEnabled(false);
+        btnResto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton5MouseClicked(evt);
+                btnRestoMouseClicked(evt);
             }
         });
 
-        jButton6.setText("Reset");
-        jButton6.setToolTipText("This button will reset the machine");
-        jButton6.setEnabled(false);
-        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnReset.setText("Reset");
+        btnReset.setEnabled(false);
+        btnReset.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton6MouseClicked(evt);
+                btnResetMouseClicked(evt);
             }
         });
 
-        jLabel5.setText("0");
-        jLabel5.setToolTipText("This line will show the coins inside the machine");
+        numTotGettoni.setText("0");
+        numTotGettoni.setToolTipText("This line will show the coins inside the machine");
 
-        jLabel6.setText("Totale Gettoni");
-        jLabel6.setToolTipText("This line will show the coins insede the machine");
+        totGettoni.setText("Totale Gettoni");
+        totGettoni.setToolTipText("This line will show the coins inside the machine");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jButton5)
+                .addComponent(btnResto)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1))
+                .addComponent(btnOnOff))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton6))
+                .addComponent(btnReset))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(75, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel6)
+                        .addComponent(totGettoni)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5))
+                        .addComponent(numTotGettoni))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(btnCappuccino)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton3)
-                                .addGap(113, 113, 113)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addComponent(numCappuccino, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(title, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnGettoni)
+                        .addGap(113, 113, 113)
+                        .addComponent(numGettoni, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnCaffe)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(numCaffe, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(75, 75, 75))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jLabel2))
+                    .addComponent(btnGettoni)
+                    .addComponent(numGettoni))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4)
-                    .addComponent(jLabel3))
+                    .addComponent(btnCaffe)
+                    .addComponent(numCaffe))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jLabel4))
+                    .addComponent(btnCappuccino)
+                    .addComponent(numCappuccino))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addComponent(jButton6)
+                    .addComponent(numTotGettoni)
+                    .addComponent(totGettoni))
+                .addGap(8, 36, Short.MAX_VALUE)
+                .addComponent(btnReset)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton5)))
+                    .addComponent(btnOnOff)
+                    .addComponent(btnResto)))
         );
 
         pack();
@@ -203,65 +197,74 @@ public class NewJFrame extends javax.swing.JFrame {
         dist = new Distributore();
     }//GEN-LAST:event_formWindowOpened
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void btnOnOffMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOnOffMouseClicked
         // TODO add your handling code here:
         dist.accensioneSpegnimento();
         if(dist.isAcceso()){
-            jButton1.setBackground(Color.GREEN);
-            jButton1.setText("On");
-            jButton2.setEnabled(true);
-            jButton2.setToolTipText("This button will pick a cappuccino");
-            jButton3.setEnabled(true);
-            jButton4.setEnabled(true);
-            jButton5.setEnabled(true);
-            jButton6.setEnabled(true);
+            btnOnOff.setBackground(Color.GREEN);
+            btnOnOff.setText("On");
+            btnCappuccino.setEnabled(true);
+            btnCappuccino.setToolTipText("This button will insert a coin");
+            btnGettoni.setEnabled(true);
+            btnGettoni.setToolTipText("This button will pick a coffee");
+            btnCaffe.setEnabled(true);
+            btnCaffe.setToolTipText("This button will pick a cappuccino");
+            btnResto.setEnabled(true);
+            btnResto.setToolTipText("This button will refund you");
+            btnReset.setEnabled(true);
+            btnReset.setToolTipText("This button will reset the machine");
         }else{
-            jButton1.setBackground(Color.RED);
-            jButton1.setText("Off");
-            jButton2.setEnabled(false);
-            jButton2.setToolTipText(null);
-            jButton3.setEnabled(false);
-            jButton4.setEnabled(false);
-            jButton5.setEnabled(false);
-            jButton6.setEnabled(false);
+            btnOnOff.setBackground(Color.RED);
+            btnOnOff.setText("Off");
+            btnCappuccino.setEnabled(false);
+            btnCappuccino.setToolTipText(null);
+            btnGettoni.setEnabled(false);
+            btnGettoni.setToolTipText(null);
+            btnCaffe.setEnabled(false);
+            btnCaffe.setToolTipText(null);
+            btnResto.setEnabled(false);
+            btnResto.setToolTipText(null);
+            btnReset.setEnabled(false);
+            btnReset.setToolTipText(null);
         }
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_btnOnOffMouseClicked
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+    private void btnGettoniMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGettoniMouseClicked
         // TODO add your handling code here:
         dist.inserimentoGettone();
-        jLabel2.setText(String.valueOf(dist.getCredito()));
-        jLabel5.setText(String.valueOf(dist.getTotGettoni()));
-    }//GEN-LAST:event_jButton3MouseClicked
+        numGettoni.setText(String.valueOf(dist.getCredito()));
+        numTotGettoni.setText(String.valueOf(dist.getTotGettoni()));
+    }//GEN-LAST:event_btnGettoniMouseClicked
 
-    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+    private void btnCaffeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCaffeMouseClicked
         // TODO add your handling code here:
         dist.prendiCaffe();
-        jLabel2.setText(String.valueOf(dist.getCredito()));
-        jLabel3.setText(String.valueOf(dist.getCaffe()));
-    }//GEN-LAST:event_jButton4MouseClicked
+        numGettoni.setText(String.valueOf(dist.getCredito()));
+        numCaffe.setText(String.valueOf(dist.getCaffe()));
+    }//GEN-LAST:event_btnCaffeMouseClicked
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void btnCappuccinoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCappuccinoMouseClicked
         // TODO add your handling code here:
         dist.prendiCappuccino();
-        jLabel2.setText(String.valueOf(dist.getCredito()));
-        jLabel4.setText(String.valueOf(dist.getCappuccino()));
-    }//GEN-LAST:event_jButton2MouseClicked
+        numGettoni.setText(String.valueOf(dist.getCredito()));
+        numCappuccino.setText(String.valueOf(dist.getCappuccino()));
+    }//GEN-LAST:event_btnCappuccinoMouseClicked
 
-    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+    private void btnRestoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRestoMouseClicked
         // TODO add your handling code here:
         dist.restituisciCredito();
-        jLabel2.setText(String.valueOf(dist.getCredito()));
-    }//GEN-LAST:event_jButton5MouseClicked
+        numGettoni.setText(String.valueOf(dist.getCredito()));
+        numTotGettoni.setText(String.valueOf(dist.getTotGettoni()));
+    }//GEN-LAST:event_btnRestoMouseClicked
 
-    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+    private void btnResetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMouseClicked
         // TODO add your handling code here:
         dist.svuotaERicarica();
-        jLabel2.setText(String.valueOf(dist.getCredito()));
-        jLabel3.setText(String.valueOf(dist.getCaffe()));
-        jLabel4.setText(String.valueOf(dist.getCappuccino()));
-        jLabel5.setText(String.valueOf(dist.getTotGettoni()));
-    }//GEN-LAST:event_jButton6MouseClicked
+        numGettoni.setText(String.valueOf(dist.getCredito()));
+        numCaffe.setText(String.valueOf(dist.getCaffe()));
+        numCappuccino.setText(String.valueOf(dist.getCappuccino()));
+        numTotGettoni.setText(String.valueOf(dist.getTotGettoni()));
+    }//GEN-LAST:event_btnResetMouseClicked
 
     /**
      * @param args the command line arguments
@@ -299,17 +302,17 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JButton btnCaffe;
+    private javax.swing.JButton btnCappuccino;
+    private javax.swing.JButton btnGettoni;
+    private javax.swing.JButton btnOnOff;
+    private javax.swing.JButton btnReset;
+    private javax.swing.JButton btnResto;
+    private javax.swing.JLabel numCaffe;
+    private javax.swing.JLabel numCappuccino;
+    private javax.swing.JLabel numGettoni;
+    private javax.swing.JLabel numTotGettoni;
+    private javax.swing.JLabel title;
+    private javax.swing.JLabel totGettoni;
     // End of variables declaration//GEN-END:variables
 }
