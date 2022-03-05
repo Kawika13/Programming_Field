@@ -16,7 +16,7 @@ public class TV {
     
     public TV(String marca){
         this.marca = marca;
-        this.canale = 1;
+        this.canale = 0;
         this.volume = 10;
     }
     
@@ -29,7 +29,7 @@ public class TV {
     }
     
     public void aumCanale(){
-        if(canale<999)
+        if(canale<5)
             canale++;
         else
             canale = 1;
@@ -39,12 +39,12 @@ public class TV {
         if(canale>1)
             canale--;
         else
-            canale = 999;
+            canale = 5;
     }
     
     
     public void alzaVolume(){
-        if(volume<100)
+        if(volume<50)
             volume++;
     }
     
@@ -57,14 +57,20 @@ public class TV {
         if(canale>0 && canale<1000)
             this.canale = canale;
     }
-    
-    
-    
-    public String info(){
-        return "canale: "+canale+" - volume: "+volume+" - stato: "+acceso;
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public int getCanale() {
+        return canale;
     }
     
     public boolean isAcceso(){
         return acceso;
+    }
+    
+    public String info(){
+        return "canale: "+canale+" - volume: "+volume+" - stato: "+acceso;
     }
 }
