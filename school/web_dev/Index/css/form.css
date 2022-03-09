@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+body{
+    /* formatting */
+    font-family: 'Open Sans', sans-serif;
+
+    /* box-model */
+    margin: 0 0 0 0;
+}
+
+.wrapper{
+    /* box-nodel */
+    margin-top: 30px;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form{
+    /* sizes */
+    width: 500px;
+    display: block;
+}
+
+h2{
+    /* formatting */
+    text-align: center;
+
+    /* box-model */
+    margin: 0 0 4px 0;
+}
+
+.fields{
+    margin-top: -8px;
+}
+.fields > .row{
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.fields > .row > .field-large{
+    /* style */
+    transition: .4s ease;
+    
+    /* box-model */
+    margin-top: 4px;
+    margin-bottom: 8px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.radios{
+    margin-bottom: 16px;
+}
+.btn{
+    margin-top: 8px;
+}
+
+
+.fields > .row > .field-large:focus-visible{
+    outline: none;
+}
+.fields > .row > .field-large:focus-within{
+    background-color: rgb(253, 226, 223);
+}

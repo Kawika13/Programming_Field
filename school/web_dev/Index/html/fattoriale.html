@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/form.css">
+        <link rel="stylesheet" href="../css/style.css">
+	
+        <script language='javascript'>
+            function fattoriale(){
+                var risultato=1;
+                var n = parseInt(document.querySelector('#n').value);
+				
+				for (let i=n; i>0; i--){
+					risultato*=i;
+				}                
+
+                document.querySelector("#risultato").innerHTML=risultato;
+            }
+        </script>
+
+        <title>Fibonacci Sequence</title>
+	    <link rel="stylesheet" href="../css/form.css">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <script src="../js/nav_bar.js"></script>
+
+        <main class="wrapper">
+            <form name="dati">
+                n = <input type="text" id="n" size="5" />
+                <button type="button" onclick="fattoriale()">n!</button>
+                <div id="risultato"></div>
+            </form>
+        </main>
+
+        <footer>
+            <p>Queste sono le informazioni contenute nel footer</p>
+        </footer>
+        
+    </body>
+</html>

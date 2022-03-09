@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+body{
+    /* formatting */
+    font-family: 'Open Sans', sans-serif;
+
+    /* box-model */
+    margin: 0 0 0 0;
+}
+
+/* Navigation Bar */
+header{
+    /* style */
+    background: linear-gradient(to bottom, rgb(255, 174, 168), white);
+
+    /* positioning */
+    position: relative;
+    top:0;
+    left:0;
+
+    /* flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    /* sizes */
+    height: 150px;
+}
+
+header > a > img{
+    /* box model */
+    margin-top: -32px;
+
+    /* sizes */
+    width: 200px;
+    height: 100px;
+}
+
+nav > ul{
+    /* formatting */
+    font-weight: 500;
+
+    /* box model */
+    margin-top: -16px;
+    padding: 8px;
+
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav > ul > li{
+    /* fomatting */
+    font-size: large;
+    display: inline;
+
+    /* box-model */
+    margin: 0px 32px 0px;
+}
+nav > ul > li > a{
+    /* style */
+    text-decoration: none;
+    color: black;
+    transition: .25s ease;
+}
+
+
+/* Content */
+.boxes{
+    /* box model */
+    margin-top: 80px;
+
+    /* flex box */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boxes > .box{
+    /* box model */
+    margin-bottom: 64px;
+
+    /* flex box */
+    display: flex;
+    flex-direction: row;
+}
+.boxes > .box > p{
+    /* box model */
+    margin: 0;
+
+    /* formatting */
+    text-align: justify;
+
+    /* sizes */
+    width: 400px;
+}
+
+.boxes > .box > .container-right{
+    /* style */
+    overflow: hidden;
+    
+    /* formatting */
+    display: block;
+
+    /* box model */
+    margin-left: 32px;
+    border-radius: 5px;
+
+    /* sizes */
+    width: 400px;
+    height: 236px;
+}
+.boxes > .box > .container-left{
+    /* style */
+    overflow: hidden;
+
+    /* formatting */
+    display: block;
+
+    /* box model */
+    margin-right: 32px;
+    border-radius: 5px;
+
+    /* sizes */
+    width: 400px;
+    height: 236px;
+}
+.boxes > .box > [name = container] > img{
+    /* style */
+    transition: ease .5s;
+
+    /* sizes */
+    width: 400px;
+    height: 236px;
+}
+
+
+.boxes > .box > [name = container] > img:hover{
+    transform: scale(1.15);
+}
+
+
+nav > ul > li > a:hover{
+    opacity: 70%;
+}

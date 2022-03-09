@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+        <title>Creating a Form</title>
+	    <link rel="stylesheet" href="../css/form.css">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+
+        <script src="../js/nav_bar.js"></script>
+
+        <main class="wrapper" role="main">
+        	<h1>Crea un nuovo Account</h1>
+        
+        	<form method="post" action="" enctype="multipart/form-data">
+
+        		 <fieldset>
+        			<h2 class="hdr-account">Account</h2>
+                
+        			<div class="fields">
+        				<p class="row">
+        					<label for="first-name">Nome:</label>
+        					<input type="text" id="first-name" name="first_name" class="field-large" autofocus aria-required="true" required>
+
+							<!-- autocomplete attribute is on by default-->
+
+        				</p>
+        				<p class="row">
+        					<label for="last-name">Cognome:</label>
+        					<input type="text" id="last-name" name="last_name" class="field-large" aria-required="true" required>
+        				</p>
+        				<p class="row">
+        					<label for="email">Email:</label>
+        					<input type="email" id="email" name="email" placeholder="yourname@example.com" class="field-large" aria-required="true" required>
+        				</p>
+        				<p class="row">
+        					<label for="password">Password:</label>
+        					<input type="password" id="password" name="password" class="field-large" aria-required="true" required>
+        				</p>
+        			</div>
+
+                    <fieldset class="radios">
+                        <legend>Sesso:</legend>
+                        <p class="row">
+                            <input type="radio" id="gender-male" name="gender" value="male" aria-required="true" required>
+                            <label for="gender-male">Maschio</label>
+                        </p>
+                        <p class="row">
+                            <input type="radio" id="gender-female" name="gender" value="female" aria-required="true" required>
+                            <label for="gender-female">Femmina</label>
+                        </p>
+                    </fieldset>
+					
+                    <div class="row">
+                        <label for="state">Stato:</label>
+                        <select id="state" name="state">
+                            <option value="IT">Italia</option>
+                            <option value="UK">Inghilterra</option>
+                            <option value="FR">Francia</option>
+                            <option value="SP">Spagna</option>
+                        </select>
+                    </div>
+        		</fieldset>
+
+                <fieldset>
+                    <h2 class="hdr-emails">Emails</h2>
+        			<div class="fields-checkboxes">
+		        		<div class="row">
+		        			<input type="checkbox" id="email-ok-msg-from-users" name="email_signup[]" value="user-emails">
+		        			<label for="email-ok-msg-from-users">Altri utenti possono vedere la tua mail.</label>
+		        		</div>
+		        		<div class="row">
+		        			<input type="checkbox" id="email-ok-occasional-updates" name="email_signup[]" value="occasional-updates">
+		        			<label for="email-ok-occasional-updates">Vuoi ricevere promozioni riguardo i nostri prodotti.</label>
+		        		</div>    			
+		        	</div>
+                </fieldset>
+                <input type="submit" value="Crea l'Account" class="btn">
+	        </form>
+        </main>
+
+		<footer>
+            <p>Queste sono le informazioni contenute nel footer</p>
+        </footer>
+
+    </body>
+</html>
