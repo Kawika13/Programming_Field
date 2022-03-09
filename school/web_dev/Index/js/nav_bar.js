@@ -10,7 +10,7 @@ function nav_bar(){
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="form.html">Form</a></li>
-                <li><a href="fattoriale.html">Fattoriale</a></li>
+                <li><a href="fibonacci.html">Fibonacci</a></li>
             </ul>
         </nav>
     </header>

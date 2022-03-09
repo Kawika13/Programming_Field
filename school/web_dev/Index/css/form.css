@@ -41,7 +41,7 @@ h2{
     flex-direction: column;
     align-items: stretch;
 }
-.fields > .row > .field-large{
+.field-large{
     /* style */
     transition: .4s ease;
     
@@ -59,9 +59,9 @@ h2{
 }
 
 
-.fields > .row > .field-large:focus-visible{
+.field-large:focus-visible{
     outline: none;
 }
-.fields > .row > .field-large:focus-within{
-    background-color: rgb(253, 226, 223);
+.field-large:focus-within{
+    background-color: rgb(250, 214, 211);
 }

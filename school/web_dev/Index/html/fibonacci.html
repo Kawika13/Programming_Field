@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../css/form.css">
+        <link rel="stylesheet" href="../css/style.css">
+	
+        <script language='javascript'>
+            function fibonacci(){
+                document.querySelector("#risultato").innerHTML = "F = {";
+                const n = parseInt(document.querySelector('#n').value);
+                let n1 = 0, n2 = 1, c;
+                c=n1+n2;
+
+                for (let i = 1; i <= n-1; i++) {
+                    document.querySelector("#risultato").innerHTML+=c + "\n,\n";
+                    c = n1 + n2;
+                    n1 = n2;
+                    n2 = c;
+                }
+
+                document.querySelector("#n").value = null;
+                document.querySelector("#risultato").innerHTML+= c + "}";
+          }
+        </script>
+
+        <title>Fibonacci Sequence</title>
+	    <link rel="stylesheet" href="../css/form.css">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <script src="../js/nav_bar.js"></script>
+
+        <main class="wrapper">
+            <form name="fields">
+                <p class="row">
+                    n = <input type="text" id="n" class="field-large" size="5"/>
+                    <button type="button" onclick="fibonacci()">&#x192(n)</button>
+                    <div id="risultato"></div>
+                </p>
+            </form>
+        </main>
+
+        <footer>
+            <p>Queste sono le informazioni contenute nel footer</p>
+        </footer>
+        
+    </body>
+</html>
