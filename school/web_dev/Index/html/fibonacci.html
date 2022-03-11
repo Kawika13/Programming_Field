@@ -7,13 +7,13 @@
 	
         <script language='javascript'>
             function fibonacci(){
-                document.querySelector("#risultato").innerHTML = "F = {";
                 const n = parseInt(document.querySelector('#n').value);
+                document.querySelector("#risultato").innerHTML = "F" + "(" + n + ")" + " = {";
                 let n1 = 0, n2 = 1, c;
                 c=n1+n2;
 
                 for (let i = 1; i <= n-1; i++) {
-                    document.querySelector("#risultato").innerHTML+=c + "\n,\n";
+                    document.querySelector("#risultato").innerHTML+= c + "\n,\n";
                     c = n1 + n2;
                     n1 = n2;
                     n2 = c;
