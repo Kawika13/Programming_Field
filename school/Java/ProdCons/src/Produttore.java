@@ -13,10 +13,12 @@ public class Produttore implements Runnable{
     
     public Produttore(Vassoio unVassoio){
         this.v = unVassoio;
+        new Thread(this, "Produttore").start();
     }
-    
+
     @Override
-    public void run(){
-        
+    public void run() {
+        for (int i=45; i<55; i++)
+            v.metti(i);
     }
 }

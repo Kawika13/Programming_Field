@@ -13,10 +13,12 @@ public class Consumatore implements Runnable{
     
     public Consumatore (Vassoio unVassoio){
         this.v = unVassoio;
+        new Thread(this, "Consumatore").start();
     }
     
     @Override
     public void run(){
-        
+        for (int i=0; i<10; i++)
+            v.prendi();
     }
 }
