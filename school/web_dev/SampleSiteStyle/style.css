@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
+html{
+    /* sizes */
+    height: 100%;
+}
+
+body{
+    /* style */
+   font-family: 'Cinzel Decorative', cursive;
+   color:#403C34;
+   background-color: #f9f0e0;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+    /* boxmodel */
+    margin:0;
+    padding:0;
+
+    /* sizes */
+    height: 100%;
+}
+
+h1{
+    /* style */
+    font-size: 50px;
+
+    /* boxmodel */
+    margin-bottom: 56px;
+}
+.h{
+    /* style */
+    color:#2B292B;
+    font-weight: 400;
+
+    /* animation */
+    transition: .25s ease;
+}
+
+
+section{
+
+    font-size: 20px;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* sizes */
+    width: 100%;
+}
+section > article{
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    /* boxmodel */
+    margin-bottom: 32px;
+
+    /* sizes */
+    width: 90%;
+}
+
+section > article > div{
+    /* boxmodel */
+    padding: 8px;
+}
+
+section > article > div > a{
+    text-decoration: none;
+    color:#ac8029;
+    transition: .5s ease;
+}
+
+
+a:hover{
+    transform: rotate(100deg);
+}
+
+.h:hover{
+    text-shadow:
+    -1em -1em 0 #895f0d;
+}
