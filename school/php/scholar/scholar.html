@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scholar sheet</title>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <body>
+
+        <script>
+            document.getElementById('Name').value = '';
+            document.getElementById('Surname').value = '';
+        </script>
+
+        <form action="scholar.php" method="post">
+            <div>
+                <label for="name" class="tlabel">Name </label>
+                <input type="text" id="Name" class="tin" name="name" required>
+            </div>
+            <div>
+                <label for="surname" class="tlabel">Surname </label>
+                <input type="text" id="Surname" class="tin" name="surname" required>
+            </div>
+            <p>Select your course's language</p>
+            <div class="radio">
+                <div class="rin">
+                    <input type="radio" id="English" class="rin" name="language" required>
+                    <label for="English" class="rlabel">English </label>
+                </div>
+                <div class="rin">
+                    <input type="radio" id="Spanish" class="rin" name="language" required>
+                    <label for="Spanish" class="rlabel">Spanish </label>
+                </div>
+                <div class="rin">
+                    <input type="radio" id="French" class="rin" name="language" required>
+                    <label for="French" class="rlabel">French </label>
+                </div>
+            </div>
+            <div class="sec">
+                <label for="class" class="seclabel">Class </label>
+                <select name="class" id="Class" class="sec">
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                    <option value="IV">IV</option>
+                    <option value="V">V</option>
+                </select>
+                <label for="section" class="seclabel">Section </label>
+                <select name="section" id="Section" class="sec">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+            </div>
+            <div>
+                <label for="grade" class="nlabel">Computer Science Grade </label>
+                <input type="number" id="Grade" class="nin" name="grade" min="1" max="10" required>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Alt-subj" class="chin" name="alt-subj">
+                <label class="chlabel">Alternative subject </label>
+            </div>
+            <input type="submit" id="sub" value="Submit">
+        </form>
+
+<!--
+    var x = document.getElementById('name').value;
+    var y = document.getElementsByClassName('label');
+    
+    document.getElementsByClassName('label').style.transform = 'translateY(0px)';
+    if(x != ''){
+        console.log('phrase');
+        y.classList.add('filled');
+        document.getElementsByClassName('filled').style.transform = 'translateY(16px)';
+    }
+-->
+
+    </body>
+</html>

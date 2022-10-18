@@ -1,0 +1,124 @@
+html{
+    /* sizes */
+    height: 100%;
+}
+
+body{
+    /* style */
+    font-family:'Times New Roman', Times, serif;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* boxmodel */
+    margin:0;
+    padding:0;
+
+    /* sizes */
+    height: 100%;
+}
+
+p{
+    /* format */
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+form > div{
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form > div.checkbox{
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+form > div.radio{
+    /* flex */
+    display: flex;
+    flex-direction: column;
+
+    /* boxmodel */
+    margin-top: -32px;
+}
+form > div.radio > div.rin{
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+form > div.radio > div.rin > input.rin{
+    /* boxmodel */
+    margin-right: 8px;
+}
+
+label{
+    /* style */
+    font-size: 20px;
+
+    /* boxmodel */
+    margin-top: 32px;
+}
+.tlabel{
+    /* position */
+    transform: translateY(0px);
+
+    /* animation */
+    transition: .75s ease-in-out;
+}
+
+form > div > input.tin{
+    /* style */
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 20%;
+    outline: none;
+    background: transparent;
+
+    /* animation */
+    transition: .75s ease;
+}
+
+form > div.checkbox > input.chin{
+    margin-right: 8px;
+}
+
+#sub{
+    /* style */
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    background-color: rgb(252, 244, 234);
+
+    /* format */
+    font-family:'Times New Roman', Times, serif;
+    font-size: 16px;
+
+    /* boxmodel */
+    margin-top: 32px;
+
+    /* animation */
+    transition: .75s ease;
+}
+
+#sub:hover, #sub:focus-within{
+    box-shadow: 5px 5px rgb(248, 221, 186);
+}
+
+
+div:hover > .tlabel, div:focus-within > .tlabel{
+    transform: translateX(-48px);
+}
+div > input.tin:focus-within{
+    background-color: rgb(252, 244, 234);
+}
