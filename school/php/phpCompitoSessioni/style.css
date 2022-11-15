@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
+html{
+    /* sizes */
+    height: 100%;
+}
+
+body{
+    /* style */
+   font-family: 'Cinzel Decorative', cursive;
+   color:#403C34;
+   background-color: #f9f0e0;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+    /* boxmodel */
+    margin:0;
+    padding:0;
+
+    /* sizes */
+    height: 100%;
+}
+
+
+h1{
+    /* style */
+    font-size: 50px;
+
+    /* boxmodel */
+    margin-bottom: 24px;
+}
+.h{
+    /* style */
+    color:#2B292B;
+    font-weight: 400;
+
+    /* animation */
+    transition: .25s ease;
+}
+
+
+section{
+    /* style */
+    font-size: 20px;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* sizes */
+    width: 100%;
+}
+section > article{
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    /* boxmodel */
+    margin-bottom: 32px;
+
+    /* sizes */
+    width: 90%;
+}
+section > article > form{
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section > article > form > label{
+    /* boxmodel */    
+    padding: 8px;
+    margin-top: 32px;
+}
+
+section > article > form > input{
+    /* style */
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 16px;
+}
+section > article > form > input.txt{
+    /* style */
+    border-bottom: 1px solid black;
+    transition: .5s ease;
+}
+
+section > article > form > .num{
+    /* style */
+    border-bottom: 1px solid black;
+}
+form > #num::-webkit-inner-spin-button{
+    /* style */
+    -webkit-appearance: none;
+}
+
+section > article > form > #sub{
+    /* style */
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    background-color: #f9f0e0;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 16px;
+
+    /* boxmodel */
+    margin-top: 32px;
+
+    /* animation */
+    transition: .75s ease;
+
+    width: 6em;
+}
+
+
+/* superclasses */
+
+form > .txt:focus-within, form > .txt:focus-within{
+    border-bottom-right-radius: 35%;
+}
+#sub:hover, #sub:focus-within{
+    box-shadow: 3px 3px 5px 5px #ac8029;
+    cursor:pointer;
+}
+.h:hover{
+    text-shadow: -1em -1em 0 #895f0d;
+    cursor:default;
+}
