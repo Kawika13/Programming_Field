@@ -1,15 +1,16 @@
 <?php 
     session_start();
-    echo "<br>";echo "<br>";
-    if(isset($_POST["vg"]) && isset($_POST["score"])){
+    error_reporting(0);
+
+    if(isset($_POST["vg"]) || isset($_POST["score"])){
         if(isset($_SESSION["scores"])){
             if($_SESSION["scores"][$_POST["vg"]] < $_POST["score"])
                 $_SESSION["scores"][$_POST["vg"]] = $_POST["score"];
         }else
-            $_SESSION["scores"] = array();      
+            $_SESSION["scores"] = array();
     }
 
-    //session_destroy(); 
+    //session_destroy();
 ?>
 
 <html>
